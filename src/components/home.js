@@ -1,21 +1,35 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import LandingPage from './landingpage';
-import AboutMe from './aboutme';
-import Contact from './contact';
-import Projects from './projects';
-import Resume from './resume';
+import React, { Component } from 'react';
+import { Grid, Cell } from 'react-mdl';
+import avatar from '../assets/avatAR.jpg';
+import { Spring } from 'react-spring/renderprops';
 
 
+class Home extends Component {
+    render() {
+        return (
+            <Spring
+            from={{ opacity: 0 }}
+            to={{ opacity: 1 }}
+            >
+                { props => (
+                    <div style={props}>
+                        <div>
+                            <Grid style={styles.design}>
+                                <Cell col={12} style={styles.layout}>
+                                    <img
+                                    src={avatar}
+                                    alt="avatar"
+                                    style={styles.avatar}
+                                    />
+                                </Cell>
+                            </Grid>
+                        </div>
+                    </div>
+                )}
+            </Spring>
+        )
+    }
+}
 
-const Main = () => (
-    <Switch>
-        <Route exact path="/" component={LandingPage} />
-        <Route path="/aboutme" component={AboutMe} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/projects" component={Projects} />
-        <Route path="/resume" component={Resume} />
-    </Switch>
-)
 
-export default Main;
+export default Home;
