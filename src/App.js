@@ -1,36 +1,40 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
-import Main from './components/main';
+import Nav from "./components/nav";
+import Home from './components/home';
+import About from './components/aboutme';
+import Skills from './components/skills';
+import Projects from './components/projects';
+import Contact from './components/contact';
+import Foot from './components/foot';
 import { Link } from 'react-router-dom';
 
+const container = {
+  background: "linear-gradient(to right, #355c7d, #6c5b7b, #c06c84)",
+  width: "100%",
+  margin: 0,
+  padding: 0,
+  overflowX: "hidden"
+}
+
 class App extends Component {
-  render () {
-    return (
-      <div className="demo-big-content">
-    <Layout>
-        <Header className="header-color" title="Title" scroll>
-            <Navigation>
-                <Link to="/aboutme">About Me</Link>
-                <Link to="/projects">Projects</Link>
-                <Link to="/contact">Contact</Link>
-                <Link to="/resume">Resume</Link>
-            </Navigation>
-        </Header>
-        <Drawer title="Title">
-            <Navigation>
-                <Link to="/aboutme">About Me</Link>
-                <Link to="/projects">Projects</Link>
-                <Link to="/contact">Contact</Link>
-                <Link to="/resume">Resume</Link>
-            </Navigation>
-        </Drawer>
-        <Content>
-            <div className="page-content" />
-            <Main/>
-        </Content>
-    </Layout>
-</div>
+  state={
+    showComponentProjects: false
+  }
+
+  toggleProjects = e => this.setState({ showComponentProjects: !this.state.showComponentProjects })
+
+  render() {
+    return(
+      <div style={container}>
+        <Nav />
+        <Home />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Foot />
+      </div>
     )
   }
 }
