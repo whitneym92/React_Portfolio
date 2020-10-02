@@ -53,7 +53,7 @@ class Contact extends Component {
                     <div style={props}>
                         <div style={styles.layout}>
                             <h1 style={styles.heading}>Let's Talk</h1>
-                            <h4>style={styles.desc}>I'm always looking to chat, collaborate, network and just talk code</h4>
+                            <h4 style={styles.desc}>I'm always looking to talk code, collaborate and network!</h4>
 
                         </div>
                         <div>
