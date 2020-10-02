@@ -7,7 +7,7 @@ import Skills from './components/skills';
 import Projects from './components/projects';
 import Contact from './components/contact';
 import Foot from './components/foot';
-import { Link } from 'react-router-dom';
+
 
 const container = {
   background: "linear-gradient(to right, #355c7d, #6c5b7b, #c06c84)",

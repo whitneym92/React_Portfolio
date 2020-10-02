@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Spring } from 'react-spring/renderprops';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInbox } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faLinkedinIn, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 const styles = {
     layout: {
