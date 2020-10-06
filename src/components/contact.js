@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Spring } from 'react-spring/renderprops';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInbox } from "@fortawesome/free-solid-svg-icons";
+import { faInbox, faFile } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import resume from '../assets/Whitney_Monk_Resume.pdf';
 
 const styles = {
     layout: {
@@ -60,6 +61,7 @@ class Contact extends Component {
                             <a href="mailto:whitneym92@gmail.com?" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInbox} size="5x" style={styles.icons} /></a>
                             <a href="https://github.com/whitneym92" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} size="5x" style={styles.icons} /></a>
                             <a href="https://www.linkedin.com/in/whitney-monk/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedinIn} size="5x" style={styles.icons} /></a>
+                            <a href={resume} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFile} size="5x" style={styles.icons} /></a>
 
                         </div>
                     </div>
