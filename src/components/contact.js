@@ -11,13 +11,6 @@ const styles = {
         background: "linear-gradient(to right, #355c7d, #6c5b7b, #c06c84)",
         zIndex: 0,
     },
-    heading: {
-        position: "relative",
-        top: -300,
-        textAlign: "center",
-        color: "black",
-        fontFamily: "Raleway sans-serif",
-    },
     desc: {
         position: "relative",
         top: -350,
@@ -52,11 +45,7 @@ class Contact extends Component {
             >
                 {props => (
                     <div style={props}>
-                        <div style={styles.layout}>
-                            <h1 style={styles.heading}>Let's Connect</h1>
-                            <h4 style={styles.desc}>I'm always looking to talk code, collaborate and network!</h4>
-
-                        </div>
+                       
                         <div>
                             <a href="mailto:whitneym92@gmail.com?" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInbox} size="5x" style={styles.icons} /></a>
                             <a href="https://github.com/whitneym92" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} size="5x" style={styles.icons} /></a>
